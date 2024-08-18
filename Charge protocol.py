@@ -1,8 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Created on Sun Oct 14 14:02:51 2018
-
 @author: Jingyuan Zhao & Zhenghong Wang
 """
 
