@@ -21,8 +21,6 @@ rcParams['ytick.labelsize'] = FS
 rcParams['font.sans-serif'] = ['Times New Roman']
 rcParams['font.family'] = 'sans-serif'
 
-########## 2a ##########
-
 # Initialize axis limits
 ax1.set_xlabel('State of charge (%)', fontsize=FS, family='Times New Roman')
 ax1.set_ylabel('Current (C rate)', fontsize=FS, family='Times New Roman')
