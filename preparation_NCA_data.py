@@ -175,7 +175,7 @@ if os.path.exists('./data/NCA_data/nmc_all_loader.pkl'):
     all_loader = load_obj('./data/NCA_data/nmc_all_loader')
 else:
 
-    for name in train_name:  # 键
+    for name in train_name:  
         tmp_fea, tmp_lbl = get_xy(name)
         all_loader.update({name: {'fea': tmp_fea, 'lbl': tmp_lbl}})
         all_fea.append(tmp_fea)
