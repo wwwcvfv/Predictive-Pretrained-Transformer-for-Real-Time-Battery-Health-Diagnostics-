@@ -34,17 +34,17 @@ files = os.listdir(data_path)  #
 files = [file for file in files if any(substring in file for substring in ['CY25-05_1', 'CY35-05_1', 'CY45-05_1'])]
 bat_prefix = list(set(files))  #
 
-bat_prefix = tqdm.tqdm(bat_prefix)  # 遍历bat_prefix所有前缀
+bat_prefix = tqdm.tqdm(bat_prefix)  
 for prefix in bat_prefix:
     cyc_v = {}
     cyc_rul = {}
     cyc_dq = {}
     #A = {}
 
-    cycle_df = pd.read_csv(os.path.join(data_path, prefix))  # pd.read_csv()读取文件
+    cycle_df = pd.read_csv(os.path.join(data_path, prefix)) 
     tmp = cycle_df[['cycle number', 'Q discharge/mA.h']]
 
-    cycle_life = int(tmp['cycle number'].iloc[-1])   # 获取最后一个循环编号
+    cycle_life = int(tmp['cycle number'].iloc[-1]) 
     for j in range(1, cycle_life + 1):
 
         A = tmp[tmp['cycle number'] == j]['Q discharge/mA.h'].iloc[-1]
